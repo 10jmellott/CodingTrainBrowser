@@ -5,7 +5,7 @@ module.exports = {
   output: {
     filename: 'site.js',
     path: path.resolve(__dirname, 'dist'),
-    publicPath: '/dist/'
+    publicPath: '/CodingTrainBrowser/dist/'
   },
   module: {
     rules: [
