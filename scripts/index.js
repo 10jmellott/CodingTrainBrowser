@@ -13,6 +13,7 @@ function createChallenge(id, name) {
 
 // Setup Challenges
 const challenges = [
+    createChallenge('014', 'Fractal Tree'),
     createChallenge('149', 'Tic-Tac-Toe'),
     createChallenge('145', '2D Ray Caster'),
     createChallenge('086', 'Cube Wave'),
