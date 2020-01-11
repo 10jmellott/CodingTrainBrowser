@@ -13,6 +13,7 @@ function createChallenge(id, name) {
 
 // Setup Challenges
 const challenges = [
+    createChallenge('016', 'L-System Tree'),
     createChallenge('015', 'OOP Tree'),
     createChallenge('014', 'Fractal Tree'),
     createChallenge('149', 'Tic-Tac-Toe'),
