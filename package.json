@@ -1,26 +1,26 @@
 {
-  "name": "ctc-browser",
-  "version": "1.0.0",
-  "description": "Coding train challenge browser site",
-  "repository": "",
-  "main": "index.js",
-  "scripts": {
-    "dev": "webpack-dev-server --inline --hot --port 8086 --mode development",
-    "build": "webpack --hide-modules --mode production"
-  },
-  "keywords": [],
-  "author": "Joshua Mellott-Lillie",
-  "license": "ISC",
-  "dependencies": {
-    "p5": "^0.10.2"
-  },
-  "devDependencies": {
-    "css-loader": "^3.2.0",
-    "node-sass": "^4.13.0",
-    "sass-loader": "^8.0.0",
-    "style-loader": "^1.0.0",
-    "webpack": "^4.41.2",
-    "webpack-cli": "^3.3.10",
-    "webpack-dev-server": "^3.9.0"
-  }
+	"name": "ctc-browser",
+	"version": "1.0.0",
+	"description": "Coding train challenge browser site",
+	"repository": "",
+	"main": "index.js",
+	"scripts": {
+		"dev": "webpack-dev-server --inline --hot --port 8086 --mode development",
+		"build": "webpack --hide-modules --mode production"
+	},
+	"keywords": [],
+	"author": "Joshua Mellott-Lillie",
+	"license": "ISC",
+	"dependencies": {
+		"p5": "^0.10.2"
+	},
+	"devDependencies": {
+		"css-loader": "^3.6.0",
+		"node-sass": "^4.14.1",
+		"sass-loader": "^8.0.2",
+		"style-loader": "^1.2.1",
+		"webpack": "^4.44.1",
+		"webpack-cli": "^3.3.12",
+		"webpack-dev-server": "^3.11.0"
+	}
 }
