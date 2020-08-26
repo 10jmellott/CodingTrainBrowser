@@ -1,0 +1,6 @@
+{
+	"id": "010",
+	"name": "Maze Generator",
+	"description": "Depth first search maze generation",
+	"thumbnail": "/assets/thumbnails/010.png"
+}

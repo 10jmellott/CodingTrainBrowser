@@ -1,10 +1,11 @@
 import { Star } from './star.js';
 
-let stars = [];
+let stars;
 
 export function setup() {
-	this.createCanvas(window.innerWidth, window.innerHeight);
+	this.createCanvas(600, 600);
 	this.strokeWeight(2);
+	stars = [];
 	for (let i = 0; i < 400; i++) {
 		stars.push(new Star(this));
 	}

@@ -4,38 +4,15 @@ import '../styles/index.scss';
 // Import Libraries
 import p5 from 'p5';
 
-function createChallenge(id, name) {
-	return {
-		id,
-		name
-	};
-}
+import challenges from './challenges';
 
-// Setup Challenges
-const challenges = [
-	createChallenge('017', 'Space-Col Tree'),
-	createChallenge('016', 'L-System Tree'),
-	createChallenge('015', 'OOP Tree'),
-	createChallenge('014', 'Fractal Tree'),
-	createChallenge('149', 'Tic-Tac-Toe'),
-	createChallenge('145', '2D Ray Caster'),
-	createChallenge('086', 'Cube Wave'),
-	createChallenge('013', 'Reaction-Diffusion'),
-	createChallenge('012', 'Lorenz Attractor'),
-	createChallenge('011', 'Terrain Generator'),
-	createChallenge('010', 'Maze Generator'),
-	createChallenge('009', 'Textured Solar System'),
-	createChallenge('008', 'Solar System 3D'),
-	createChallenge('007', 'Solar System'),
-	createChallenge('006', 'Mitosis'),
-	createChallenge('005', 'Space Invaders'),
-	createChallenge('004', 'Purple Rain'),
-	createChallenge('003', 'Snake'),
-	createChallenge('002', 'Menger Sponge'),
-	createChallenge('001', 'Starfield'),
-];
+const navigation = document.getElementById('navigation');
+const nextEl = document.getElementById('next');
+const prevEl = document.getElementById('prev');
+const titleEl = document.getElementById('titlebar-active');
 
 // Setup challenge import functionality
+let activeChallengeIndex;
 let playingInstance;
 function playChallenge(challenge) {
 	import(`./challenges/${challenge.id}/sketch.js`).then(c => {
@@ -51,18 +28,70 @@ function playChallenge(challenge) {
 			}
 		}
 		playingInstance = new p5(challenge.sketch, 'container');
+		activeChallengeIndex = challenges.indexOf(challenge);
+
+		// Update active challenge title
+		if (titleEl) {
+			titleEl.innerHTML = challenge.name;
+		}
+
+		// Update navigation buttons
+		if (activeChallengeIndex === 0 && prevEl) {
+			prevEl.classList.add('disabled');
+		} else if (prevEl) {
+			prevEl.classList.remove('disabled');
+		}
+		if (activeChallengeIndex >= challenges.length - 1 && nextEl) {
+			nextEl.classList.add('disabled');
+		} else if (nextEl) {
+			nextEl.classList.remove('disabled');
+		}
+
+		// Update navigation menu
+		navigation.querySelectorAll('.navigation-link').forEach(el => {
+			el.classList.remove('active');
+		});
+		const navel = navigation.querySelector(`.challenge-${challenge.id}`);
+		if (navel) {
+			navel.classList.add('active');
+		}
 	});
 };
 
 // Initialize the Navigation + Functional Behaviors
-const navigation = document.getElementById('navigation');
 for (let challenge of challenges) {
-	const link = document.createElement('span');
+	const link = document.createElement('div');
+	link.classList.add(`challenge-${challenge.id}`);
 	link.classList.add('navigation-link');
 	link.onclick = () => playChallenge(challenge);
-	link.innerHTML = challenge.name;
+	link.innerHTML = `
+		<div class="navigation-link__thumb-container">
+			<img class="navigation-link__thumb" src="${challenge.thumbnail}" />
+		</div>
+		<div>
+			<p class="navigation-link__id">${challenge.id}</p>
+			<p class="navigation-link__name">${challenge.name}</p>
+			<p  class="navigation-link__description">${challenge.description}</p>
+		</div>
+	`;
 	navigation.appendChild(link);
 }
 
 // Play the latest challenge
 playChallenge(challenges[0]);
+
+if (prevEl) {
+	prevEl.onclick = () => {
+		if (activeChallengeIndex > 0) {
+			playChallenge(challenges[activeChallengeIndex - 1]);
+		}
+	}
+}
+
+if (nextEl) {
+	nextEl.onclick = () => {
+		if (activeChallengeIndex < challenges.length - 1) {
+			playChallenge(challenges[activeChallengeIndex + 1]);
+		}
+	}
+}

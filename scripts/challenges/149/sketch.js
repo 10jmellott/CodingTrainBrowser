@@ -48,6 +48,9 @@ export function mouseClicked() {
 	if (winningMoves) {
 		return;
 	}
+	if (this.mouseX <= 0 || this.mouseY <= 0 || this.mouseX >= this.width || this.mouseY >= this.height) {
+		return;
+	}
 
 	const xi = (this.mouseX - (this.mouseX % 100)) / 100;
 	const yi = (this.mouseY - (this.mouseY % 100)) / 100;

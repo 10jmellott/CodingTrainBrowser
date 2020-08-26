@@ -8,9 +8,13 @@ export function setup() {
 	this.noStroke();
 	this.ortho(-this.width / 1.6, this.width / 1.6, this.height / 1.6, -this.height / 1.6, 0, 5000);
 	menger = new Menger(450);
+	dirty = true;
 }
 
 export function mouseClicked() {
+	if (this.mouseX <= 0 || this.mouseY <= 0 || this.mouseX >= this.width || this.mouseY >= this.height) {
+		return;
+	}
 	menger.subdivide();
 	dirty = true;
 }

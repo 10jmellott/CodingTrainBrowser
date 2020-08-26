@@ -4,7 +4,7 @@ export function setup() {
 	this.createCanvas(600, 600);
 
 	slider = this.createSlider(0, this.TWO_PI, this.PI / 5.0, this.TWO_PI / 144);
-	slider.position(40, 100);
+	slider.position(400, 100);
 	slider.style('width', '160px');
 }
 

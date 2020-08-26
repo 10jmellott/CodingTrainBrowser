@@ -3,14 +3,16 @@ import { Invader } from './invader.js';
 
 const INVADERS_PER_ROW = 3;
 let ship;
-let invaders = [];
-let halfWayPoint = false;
+let invaders;
+let halfWayPoint;
 
 export function setup() {
 	this.createCanvas(640, 480);
 	this.rectMode(this.CENTER);
 	this.ellipseMode(this.CENTER);
 	this.noStroke();
+	invaders = [];
+	halfWayPoint = false;
 	ship = new Ship(this);
 	const spacing = this.width / (INVADERS_PER_ROW + 1);
 	for (let row = 0; row < 6; row++) {

@@ -1,4 +1,4 @@
-const MAX_POINTS = 100;
+const MAX_POINTS = 800;
 
 let lorenzConstants;
 let nx;

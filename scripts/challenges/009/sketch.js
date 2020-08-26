@@ -1,5 +1,9 @@
 import { CelestialBody } from './celestial-body.js';
 
+function getImage(src) {
+	return window.location.pathname + 'assets/challenges/009/' + src;
+}
+
 let root;
 
 export function setup() {
@@ -8,10 +12,10 @@ export function setup() {
 	this.noStroke();
 
 	const textures = {
-		sun: this.loadImage('/CodingTrainBrowser/assets/sunmap.jpg'),
-		earth: this.loadImage('/CodingTrainBrowser/assets/earthmap1k.jpg'),
-		jupiter: this.loadImage('/CodingTrainBrowser/assets/jupitermap.jpg'),
-		pluto: this.loadImage('/CodingTrainBrowser/assets/plutomap1k.jpg')
+		sun: this.loadImage(getImage('sunmap.jpg')),
+		earth: this.loadImage(getImage('earthmap1k.jpg')),
+		jupiter: this.loadImage(getImage('jupitermap.jpg')),
+		pluto: this.loadImage(getImage('plutomap1k.jpg'))
 	};
 
 	root = new CelestialBody(this, 50, 0, 0, 0, textures);

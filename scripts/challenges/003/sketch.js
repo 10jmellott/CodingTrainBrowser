@@ -6,6 +6,7 @@ let lastKey;
 export function setup() {
 	this.createCanvas(600, 600);
 	this.rectMode(this.CORNER);
+	lastKey = null;
 	game = new Game(this, 30);
 	this.frameRate(7);
 	this.stroke(100);

@@ -4,9 +4,9 @@ let raindrops = [];
 let offset = 0;
 
 export function setup() {
-	this.createCanvas(window.innerWidth, window.innerHeight);
+	this.createCanvas(600, 600);
 	this.stroke(153, 51, 255);
-	for (let i = 0; i < 400; i++) {
+	for (let i = 0; i < 200; i++) {
 		raindrops.push(new Raindrop(this));
 	}
 }
