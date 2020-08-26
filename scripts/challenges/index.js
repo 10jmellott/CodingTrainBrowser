@@ -18,6 +18,7 @@ import spaceTree from './017/meta.json';
 import cubeWave from './086/meta.json';
 import rayCast2d from './145/meta.json';
 import tictactoe from './149/meta.json';
+import superellipse from './019/meta.json';
 
 // Setup Challenges
 export default [
@@ -40,5 +41,6 @@ export default [
 	spaceTree,
 	cubeWave,
 	rayCast2d,
-	tictactoe
+	tictactoe,
+	superellipse
 ].reverse();
