@@ -19,6 +19,7 @@ import cubeWave from './086/meta.json';
 import rayCast2d from './145/meta.json';
 import tictactoe from './149/meta.json';
 import superellipse from './019/meta.json';
+import supershape2d from './023/meta.json';
 
 // Setup Challenges
 export default [
@@ -42,5 +43,6 @@ export default [
 	cubeWave,
 	rayCast2d,
 	tictactoe,
-	superellipse
+	superellipse,
+	supershape2d
 ].reverse();
