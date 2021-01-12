@@ -20,6 +20,8 @@ import rayCast2d from './145/meta.json';
 import tictactoe from './149/meta.json';
 import superellipse from './019/meta.json';
 import supershape2d from './023/meta.json';
+import supershape3d from './026/meta.json';
+import lsystemCircles from './016-1/meta.json';
 
 // Setup Challenges
 export default [
@@ -39,10 +41,12 @@ export default [
 	recursiveTree,
 	oopTree,
 	lsystemTree,
+	lsystemCircles,
 	spaceTree,
 	cubeWave,
 	rayCast2d,
 	tictactoe,
 	superellipse,
-	supershape2d
+	supershape2d,
+	supershape3d,
 ].reverse();
