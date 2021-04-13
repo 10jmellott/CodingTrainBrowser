@@ -5,11 +5,14 @@ export function setup() {
 	this.stroke(255);
 }
 
-const MAX_POINTS = 100;
+const MAX_POINTS = 50;
 
 export function draw() {
 	this.background(0);
 	this.orbitControl();
+
+	this.rotateX(1.1);
+	this.rotateY(0.6);
 
 	const scale = 150;
 
@@ -39,6 +42,7 @@ export function draw() {
 		}
 		this.endShape();
 	}
+
 
 }
 

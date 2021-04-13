@@ -66,7 +66,7 @@ for (let challenge of challenges) {
 	link.onclick = () => playChallenge(challenge);
 	link.innerHTML = `
 		<div class="navigation-link__thumb-container">
-			<img class="navigation-link__thumb" src="${challenge.thumbnail}" />
+			<img class="navigation-link__thumb" src="${window.location.pathname}${challenge.thumbnail}" />
 		</div>
 		<div>
 			<p class="navigation-link__id">${challenge.id}</p>

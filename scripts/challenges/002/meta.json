@@ -2,5 +2,5 @@
 	"id": "002",
 	"name": "Menger Sponge",
 	"description": "Procedurally generated fractal curve",
-	"thumbnail": "/assets/thumbnails/002.png"
+	"thumbnail": "assets/thumbnails/002.png"
 }

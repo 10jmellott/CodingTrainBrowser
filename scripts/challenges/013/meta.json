@@ -2,5 +2,5 @@
 	"id": "013",
 	"name": "Reaction Diffusion",
 	"description": "Gray Scott reaction diffusion simulation",
-	"thumbnail": "/assets/thumbnails/013.png"
+	"thumbnail": "assets/thumbnails/013.png"
 }

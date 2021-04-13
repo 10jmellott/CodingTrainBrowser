@@ -2,5 +2,5 @@
 	"id": "015",
 	"name": "OOP Tree",
 	"description": "A dynamically drawn tree with movement and leaves",
-	"thumbnail": "/assets/thumbnails/015.png"
+	"thumbnail": "assets/thumbnails/015.png"
 }
