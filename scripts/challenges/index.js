@@ -22,6 +22,7 @@ import superellipse from './019/meta.json';
 import supershape2d from './023/meta.json';
 import supershape3d from './026/meta.json';
 import lsystemCircles from './016-1/meta.json';
+import mandelbrot from './021/meta.json';
 
 // Setup Challenges
 export default [
@@ -49,4 +50,5 @@ export default [
 	superellipse,
 	supershape2d,
 	supershape3d,
+	mandelbrot
 ].reverse();

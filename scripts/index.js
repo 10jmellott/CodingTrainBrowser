@@ -22,8 +22,8 @@ function playChallenge(challenge) {
 		challenge.sketch = (p5) => {
 			const props = Object.keys(c);
 			for (let prop of props) {
-				p5[prop] = () => {
-					c[prop].call(p5);
+				p5[prop] = (e) => {
+					c[prop].call(p5, e);
 				}
 			}
 		}
