@@ -1,4 +1,4 @@
-const maxIterations = 256;
+let maxIterations = 256;
 
 let isDirty;
 
