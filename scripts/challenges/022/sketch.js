@@ -1,14 +1,26 @@
-let maxIterations = 32;
+const maxIterations = 256;
 
-let isDirty = true;
-let originX = 0;
-let originY = 0;
-let minVal = -2;
-let maxVal = 2;
+let isDirty;
+
+let originX;
+let originY;
+
+let minVal;
+let maxVal;
+
+let juliaA;
+let juliaB;
 
 export function setup() {
 	this.createCanvas(400, 400);
 	this.pixelDensity(1);
+	isDirty = true;
+	originX = 0;
+	originY = 0;
+	minVal = -2;
+	maxVal = 2;
+	juliaA = -0.8;
+	juliaB = 0.156;
 	update.call(this);
 }
 
@@ -23,15 +35,19 @@ export function mouseWheel(e) {
 	if (e.delta > 0) {
 		minVal *= 2;
 		maxVal *= 2;
-		maxIterations -= 32;
 	} else if (e.delta < 0) {
 		minVal /= 2;
 		maxVal /= 2;
-		maxIterations += 32;
 	}
 
 	maxIterations = Math.max(maxIterations, 32)
 
+	isDirty = true;
+}
+
+export function mouseClicked() {
+	juliaA = this.map(this.mouseX, 0, this.width, -2, 2);
+	juliaB = this.map(this.mouseY, 0, this.height, -2, 2);
 	isDirty = true;
 }
 
@@ -40,6 +56,7 @@ function update() {
 		return;
 	}
 	isDirty = false;
+
 	this.loadPixels();
 	for (let x = 0; x < this.width; x++) {
 		let a0 = this.map(x, 0, this.width, minVal + originX, maxVal + originX);
@@ -52,12 +69,11 @@ function update() {
 			let n = 0;
 
 			while (n < maxIterations) {
-				let a2 = a * a - b * b + a0;
-				let b2 = 2 * a * b + b0;
-				a = a2;
-				b = b2;
+				let atemp = a * a - b * b + juliaA;
+				b = 2 * a * b + juliaB;
+				a = atemp;
 
-				if (Math.abs(a + b) > 16) {
+				if (Math.abs(a + b) > 4) {
 					break;
 				}
 
