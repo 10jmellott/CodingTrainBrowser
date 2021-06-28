@@ -24,6 +24,7 @@ import supershape3d from './026/meta.json';
 import lsystemCircles from './016-1/meta.json';
 import mandelbrot from './021/meta.json';
 import julia from './022/meta.json';
+import perlinFlow from './024/meta.json';
 
 // Setup Challenges
 export default [
@@ -52,5 +53,6 @@ export default [
 	supershape2d,
 	supershape3d,
 	mandelbrot,
-	julia
+	julia,
+	perlinFlow
 ].reverse();
