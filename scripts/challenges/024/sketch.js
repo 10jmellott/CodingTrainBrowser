@@ -1,7 +1,7 @@
 import p5 from 'p5';
 import Particle from './particle';
 
-const scale = 15;
+const scale = 20;
 
 let t = 0;
 let rows, columns;
@@ -10,11 +10,12 @@ const particles = [];
 
 export function setup() {
 	this.createCanvas(600, 600);
+	this.frameRate(30);
 
 	rows = this.height / scale;
 	columns = this.width / scale;
 
-	for (let i = 0; i < 100; i++) {
+	for (let i = 0; i < 25; i++) {
 		const p = new Particle();
 		p.initialize(this, this.width, this.height);
 		particles.push(p);

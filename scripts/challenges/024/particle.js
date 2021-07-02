@@ -1,4 +1,3 @@
-
 export default class Particle {
 	constructor() {
 	}
@@ -6,7 +5,7 @@ export default class Particle {
 	initialize(renderer) {
 		// Randomly set the initial position
 		const x = renderer.random() * renderer.width;
-		const y = renderer.random() * renderer.height
+		const y = renderer.random() * renderer.height;
 		this.prevPosition = renderer.createVector(x, y);
 		this.position = renderer.createVector(x, y);
 		this.velocity = renderer.createVector(0, 0);
@@ -20,7 +19,7 @@ export default class Particle {
 
 		// Randomly set the particle lifetime with a duration
 		this.age = 0;
-		this.lifetime = renderer.random() * 1000 + 500;
+		this.lifetime = renderer.random() * 500 + 250;
 	}
 
 	applyVectorForce(force) {
@@ -54,22 +53,13 @@ export default class Particle {
 		this.updatePreviousPosition();
 		this.position.add(this.velocity);
 
-		// Wrap the particles around the edge of the screen
-		if (this.position.x < 0) {
-			this.position.x = renderer.width;
-			this.updatePreviousPosition();
-		}
-		if (this.position.x > renderer.width) {
-			this.position.x = 0;
-			this.updatePreviousPosition();
-		}
-		if (this.position.y < 0) {
-			this.position.y = renderer.height;
-			this.updatePreviousPosition();
-		}
-		if (this.position.y > renderer.height) {
-			this.position.y = 0;
-			this.updatePreviousPosition();
+		if (
+			this.position.x < 0 ||
+			this.position.x > renderer.width ||
+			this.position.y < 0 ||
+			this.position.y > renderer.height
+		) {
+			this.initialize(renderer);
 		}
 	}
 
