@@ -27,6 +27,7 @@ import julia from './022/meta.json';
 import perlinFlow from './024/meta.json';
 import fireworks from './027/meta.json';
 import metaball from './028/meta.json';
+import phyllotaxis from './030/meta.json';
 
 // Setup Challenges
 export default [
@@ -58,5 +59,6 @@ export default [
 	julia,
 	perlinFlow,
 	fireworks,
-	metaball
+	metaball,
+	phyllotaxis
 ].reverse();
