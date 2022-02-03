@@ -17,7 +17,7 @@ module.exports = {
 					{
 						loader: 'sass-loader',
 						options: {
-							implementation: require('node-sass'),
+							implementation: require('sass'),
 						},
 					},
 				],
@@ -25,6 +25,9 @@ module.exports = {
 		],
 	},
 	devServer: {
+		static: {
+			directory: __dirname
+		},
 		port: 8086,
 		hot: true
 	},
