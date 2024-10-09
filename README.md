@@ -1,5 +1,5 @@
-# Coding Train Challenges Browser
+# Vue 3 + TypeScript + Vite
 
-This is the list of coding train challenges that have been completed with the help of the p5.js library. The full list of coding challenges can be found here: https://thecodingtrain.com/CodingChallenges/
+This template should help get you started developing with Vue 3 and TypeScript in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
 
-My personal implementations can be found on the GitHub Pages link for this project.
+Learn more about the recommended Project Setup and IDE Support in the [Vue Docs TypeScript Guide](https://vuejs.org/guide/typescript/overview.html#project-setup).

@@ -1,26 +1,23 @@
 {
-	"name": "ctc-browser",
-	"version": "1.0.0",
-	"description": "Coding train challenge browser site",
-	"repository": "",
-	"main": "index.js",
+	"name": "codingtrainbrowser",
+	"private": true,
+	"version": "0.0.0",
+	"type": "module",
 	"scripts": {
-		"dev": "webpack serve --mode development",
-		"build": "webpack --mode production"
+		"dev": "vite --port 8086",
+		"build": "vue-tsc -b && vite build",
+		"preview": "vite preview"
 	},
-	"keywords": [],
-	"author": "Joshua Mellott-Lillie",
-	"license": "ISC",
 	"dependencies": {
-		"p5": "^1.4.1"
+		"p5": "^1.11.0",
+		"vue": "^3.5.10"
 	},
 	"devDependencies": {
-		"css-loader": "^6.6.0",
-		"sass": "^1.49.7",
-		"sass-loader": "^12.4.0",
-		"style-loader": "^3.3.1",
-		"webpack": "^5.32.0",
-		"webpack-cli": "^4.6.0",
-		"webpack-dev-server": "^4.7.4"
-	}
+		"@types/p5": "^1.7.6",
+		"@vitejs/plugin-vue": "^5.1.4",
+		"typescript": "^5.5.3",
+		"vite": "^5.4.8",
+		"vue-tsc": "^2.1.6"
+	},
+	"packageManager": "pnpm@9.10.0+sha512.73a29afa36a0d092ece5271de5177ecbf8318d454ecd701343131b8ebc0c1a91c487da46ab77c8e596d6acf1461e3594ced4becedf8921b074fbd8653ed7051c"
 }

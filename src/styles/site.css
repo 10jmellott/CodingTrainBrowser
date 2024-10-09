@@ -1,0 +1,27 @@
+@import url("./reset.css");
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap");
+
+:root {
+	--background: #353535;
+	--background-alt: #284b63;
+	--foreground: #fff;
+	--dim-foreground: #d9d9d9;
+	--accent: #3c6e71;
+	--accent2: #de6449;
+}
+
+html {
+	background-color: var(--background);
+	color: var(--foreground);
+	font-family: "Roboto Mono", "Courier New", monospace;
+	font-optical-sizing: auto;
+	padding: 24px;
+
+	img {
+		display: block;
+	}
+}
+
+body {
+	overscroll-behavior: none;
+}
