@@ -4,7 +4,7 @@ let raindrops = [];
 let offset = 0;
 
 export function setup() {
-	this.createCanvas(600, 600);
+	this.createCanvas(400, 400);
 	this.stroke(153, 51, 255);
 	for (let i = 0; i < 200; i++) {
 		raindrops.push(new Raindrop(this));

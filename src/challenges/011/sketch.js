@@ -1,6 +1,6 @@
 const XRANGE = 30;
 const YRANGE = 20;
-const SCALE = 30;
+const SCALE = 20;
 const MIN_HEIGHT = -100;
 const MAX_HEIGHT = 250;
 const DXOFF = 0.1;
@@ -23,7 +23,7 @@ export function setup() {
 	distanceY = 0;
 	terrain = [];
 
-	this.createCanvas(600, 600, this.WEBGL);
+	this.createCanvas(400, 400, this.WEBGL);
 	this.smooth();
 
 	let yOff = -distanceY;

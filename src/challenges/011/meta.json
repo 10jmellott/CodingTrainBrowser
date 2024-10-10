@@ -1,6 +1,0 @@
-{
-	"id": "011",
-	"name": "Terrain Generator",
-	"description": "Terrain generator using perlin noise",
-	"thumbnail": "assets/thumbnails/011.png"
-}

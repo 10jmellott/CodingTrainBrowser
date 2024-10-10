@@ -3,7 +3,7 @@ import { CelestialBody } from './celestial-body.js';
 let root;
 
 export function setup() {
-	this.createCanvas(700, 700);
+	this.createCanvas(400, 400);
 	this.ellipseMode(this.CENTER);
 	this.fill(255, 80);
 

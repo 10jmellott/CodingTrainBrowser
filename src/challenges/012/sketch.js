@@ -10,7 +10,7 @@ export function setup() {
 	points = [];
 	colors = [];
 
-	this.createCanvas(600, 600, this.WEBGL);
+	this.createCanvas(400, 400, this.WEBGL);
 	this.smooth();
 
 	points.push(this.createVector(

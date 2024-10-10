@@ -1,5 +1,5 @@
 export function setup() {
-	this.createCanvas(600, 600, this.WEBGL);
+	this.createCanvas(400, 400, this.WEBGL);
 	this.smooth();
 	this.fill(127);
 	this.stroke(255);

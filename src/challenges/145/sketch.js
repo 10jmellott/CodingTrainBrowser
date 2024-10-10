@@ -8,7 +8,7 @@ let offx = 0;
 let offy = 10000;
 
 export function setup() {
-	this.createCanvas(640, 480);
+	this.createCanvas(400, 400);
 	this.strokeWeight(1);
 
 	for (let i = 0; i < 5; i++) {

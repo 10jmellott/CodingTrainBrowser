@@ -9,12 +9,7 @@ defineProps<{
 
 <template>
 	<Card class="preview">
-		<img
-			:src="`/thumbnails/${challenge.id}.png`"
-			alt="Thumbnail"
-			height="64"
-			width="64"
-		/>
+		<img :src="`./thumbnails/${challenge.id}.png`" alt="Thumbnail" height="64" width="64" />
 		<p class="title">{{ challenge.name }}</p>
 		<p class="number">#{{ challenge.id }}</p>
 	</Card>

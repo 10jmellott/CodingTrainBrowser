@@ -3,7 +3,7 @@ import { Star } from "./star.js";
 let stars;
 
 export function setup() {
-	this.createCanvas(600, 600);
+	this.createCanvas(400, 400);
 	this.strokeWeight(2);
 	stars = [];
 	for (let i = 0; i < 400; i++) {

@@ -1,13 +1,13 @@
 import { CelestialBody } from './celestial-body.js';
 
 function getImage(src) {
-	return window.location.pathname + 'assets/challenges/009/' + src;
+	return './009/' + src;
 }
 
 let root;
 
 export function setup() {
-	this.createCanvas(700, 700, this.WEBGL);
+	this.createCanvas(400, 400, this.WEBGL);
 	this.smooth();
 	this.noStroke();
 

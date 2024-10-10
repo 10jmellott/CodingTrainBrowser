@@ -4,7 +4,7 @@ let cells = [];
 let offset = 0;
 
 export function setup() {
-	this.createCanvas(600, 600);
+	this.createCanvas(400, 400);
 	this.smooth();
 	this.noStroke();
 	this.ellipseMode(this.CENTER);

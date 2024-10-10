@@ -10,7 +10,7 @@ export function setup() {
 	cells = [];
 	toVisit = [0];
 
-	this.createCanvas(600, 600);
+	this.createCanvas(400, 400);
 	this.frameRate(30);
 
 	w = this.width / COLS;

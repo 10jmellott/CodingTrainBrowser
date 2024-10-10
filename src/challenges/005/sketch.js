@@ -7,7 +7,7 @@ let invaders;
 let halfWayPoint;
 
 export function setup() {
-	this.createCanvas(640, 480);
+	this.createCanvas(400, 400);
 	this.rectMode(this.CENTER);
 	this.ellipseMode(this.CENTER);
 	this.noStroke();

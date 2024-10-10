@@ -4,7 +4,7 @@ let menger;
 let dirty = true;
 
 export function setup() {
-	this.createCanvas(600, 600, this.WEBGL);
+	this.createCanvas(400, 400, this.WEBGL);
 	this.noStroke();
 	this.ortho(-this.width / 1.6, this.width / 1.6, this.height / 1.6, -this.height / 1.6, 0, 5000);
 	menger = new Menger(450);

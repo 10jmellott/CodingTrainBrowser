@@ -1,5 +1,5 @@
-export const width = 600;
-export const height = 600;
+export const width = 400;
+export const height = 400;
 
 export const k = 30;
 export const r = 10;

@@ -5,7 +5,7 @@ let n;
 let position;
 
 export function setup() {
-	this.createCanvas(800, 800);
+	this.createCanvas(400, 400);
 	this.colorMode(this.HSB);
 	this.background(0);
 	n = 2000;

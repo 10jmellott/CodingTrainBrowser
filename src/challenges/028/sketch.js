@@ -3,7 +3,7 @@ import Metaball from './metaball';
 let metaballs;
 
 export function setup() {
-	this.createCanvas(200, 200);
+	this.createCanvas(400, 400);
 	this.colorMode(this.HSB);
 	metaballs = [];
 	for (let i = 0; i < 4; i++) {

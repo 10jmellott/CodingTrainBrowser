@@ -5,7 +5,7 @@ let attractions = [];
 let homeColony;
 
 export function setup() {
-	this.createCanvas(600, 600);
+	this.createCanvas(400, 400);
 	this.ellipseMode(this.RADIUS);
 	this.noStroke();
 	this.strokeWeight(4);

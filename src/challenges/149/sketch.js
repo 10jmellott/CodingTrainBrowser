@@ -4,7 +4,7 @@ let winningMoves;
 let stalemate;
 
 export function setup() {
-	this.createCanvas(300, 300);
+	this.createCanvas(400, 400);
 
 	this.textAlign(this.CENTER, this.CENTER);
 	this.textSize(64);

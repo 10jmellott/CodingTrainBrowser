@@ -11,7 +11,7 @@ const rules = [{
 }];
 
 export function setup() {
-	this.createCanvas(600, 600);
+	this.createCanvas(400, 400);
 	this.stroke(245, 40);
 	this.strokeWeight(3);
 	this.strokeCap(this.ROUND);

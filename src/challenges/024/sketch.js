@@ -9,7 +9,7 @@ let rows, columns;
 const particles = [];
 
 export function setup() {
-	this.createCanvas(600, 600);
+	this.createCanvas(400, 400);
 	this.frameRate(30);
 
 	rows = this.height / scale;

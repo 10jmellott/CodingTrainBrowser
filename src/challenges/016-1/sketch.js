@@ -10,7 +10,7 @@ const rule = {
 };
 
 export function setup() {
-	this.createCanvas(600, 600);
+	this.createCanvas(400, 400);
 	this.noFill();
 	this.strokeWeight(3);
 	this.strokeCap(this.SQUARE);

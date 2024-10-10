@@ -3,7 +3,7 @@ import { Branch } from './branch.js';
 let root;
 
 export function setup() {
-	this.createCanvas(600, 600);
+	this.createCanvas(400, 400);
 
 	root = new Branch(this, this.height / 2.7, this.PI / 5.0);
 

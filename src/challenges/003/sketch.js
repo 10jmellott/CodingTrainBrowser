@@ -4,7 +4,7 @@ let game;
 let lastKey;
 
 export function setup() {
-	this.createCanvas(600, 600);
+	this.createCanvas(400, 400);
 	this.rectMode(this.CORNER);
 	lastKey = null;
 	game = new Game(this, 30);

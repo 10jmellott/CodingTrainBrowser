@@ -3,7 +3,7 @@ import Firework from './firework';
 let fireworks;
 
 export function setup() {
-	this.createCanvas(600, 600);
+	this.createCanvas(400, 400);
 
 	fireworks = [];
 	for (let i = 0; i < 20; i++) {

@@ -1,7 +1,7 @@
 let slider;
 
 export function setup() {
-	this.createCanvas(600, 600);
+	this.createCanvas(400, 400);
 
 	slider = this.createSlider(0, this.TWO_PI, this.PI / 5.0, this.TWO_PI / 144);
 	slider.position(400, 100);

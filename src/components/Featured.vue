@@ -6,7 +6,7 @@ import StackBlitz from "./icons/StackBlitz.vue";
 import { ref, onMounted, watch } from "vue";
 import p5 from "p5";
 
-import { Challenge } from "../challenges";
+import { Challenge, importChallenge } from "../challenges";
 
 const props = defineProps<{
 	challenge: Challenge;
@@ -15,9 +15,10 @@ const props = defineProps<{
 const container = ref<HTMLDivElement | null>(null);
 let p5Instance: any;
 async function updateChallenge() {
-	const challenge = await props.challenge.sketch();
+	const challenge = await importChallenge(props.challenge);
 
 	if (container.value) {
+		console.log(p5Instance);
 		p5Instance?.remove();
 		const p5Setup = (p5Context: any) => {
 			const p5Props = Object.keys(challenge);
@@ -49,16 +50,9 @@ watch(() => props.challenge, updateChallenge);
 			<p>
 				{{ challenge.description }}
 			</p>
-			<Button
-				href="https://github.com/10jmellott/CodingTrainBrowser"
-				:logo="GitHub"
-				text="Open in GitHub"
-			/>
-			<Button
-				href="https://stackblitz.com/github/10jmellott/CodingTrainBrowser"
-				:logo="StackBlitz"
-				text="Open in StackBlitz"
-			/>
+			<Button href="https://github.com/10jmellott/CodingTrainBrowser" :logo="GitHub" text="Open in GitHub" />
+			<Button href="https://stackblitz.com/github/10jmellott/CodingTrainBrowser" :logo="StackBlitz"
+				text="Open in StackBlitz" />
 		</div>
 		<div class="featured__player" ref="container"></div>
 	</Card>
