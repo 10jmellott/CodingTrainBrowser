@@ -8,15 +8,20 @@
 		"preview": "vite preview"
 	},
 	"dependencies": {
-		"p5": "^1.11.0",
-		"vue": "^3.5.10"
+		"p5": "^1.11.11",
+		"vue": "^3.5.26"
 	},
 	"devDependencies": {
-		"@types/p5": "^1.7.6",
-		"@vitejs/plugin-vue": "^5.1.4",
-		"typescript": "^5.5.3",
-		"vite": "^5.4.8",
-		"vue-tsc": "^2.1.6"
+		"@types/p5": "^1.7.7",
+		"@vitejs/plugin-vue": "^5.2.4",
+		"typescript": "^5.9.3",
+		"vite": "^5.4.21",
+		"vue-tsc": "^2.2.12"
 	},
-	"packageManager": "pnpm@9.10.0+sha512.73a29afa36a0d092ece5271de5177ecbf8318d454ecd701343131b8ebc0c1a91c487da46ab77c8e596d6acf1461e3594ced4becedf8921b074fbd8653ed7051c"
+	"packageManager": "pnpm@9.10.0+sha512.73a29afa36a0d092ece5271de5177ecbf8318d454ecd701343131b8ebc0c1a91c487da46ab77c8e596d6acf1461e3594ced4becedf8921b074fbd8653ed7051c",
+	"pnpm": {
+		"overrides": {
+			"esbuild@<=0.24.2": ">=0.25.0"
+		}
+	}
 }
